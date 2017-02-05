@@ -1,0 +1,5 @@
+name: 'Strike Custom'
+type: module
+description: 'Custom install landing page for Strike sites'
+package: 'Custom'
+core: 8.x

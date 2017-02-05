@@ -1,0 +1,7 @@
+strike_custom.welcome:
+  path: '/strike-install-complete'
+  defaults:
+    _title: 'Welcome to Lightning + Strike!'
+    _controller: '\Drupal\strike_custom\Controller\StrikeController:welcome'
+  requirements:
+    _permission: 'access content'
