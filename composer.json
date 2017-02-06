@@ -23,12 +23,17 @@
         "drupal/lightning": "^8.1.0",
         "drupal/bootstrap": "8.*",
         "balsama/lightningdemo": "dev-master",
-        "cebe/markdown": "^1.0.0"
+        "cebe/markdown": "^1.0.0",
+        "drupal/adminimal_admin_toolbar": "^8.1",
+        "drupal/adminimal_theme": "^8.1",
+        "drupal/entity_block": "^8.1@alpha",
+        "drupal/view_modes_display": "^1.0",
+        "drupal/paragraphs": "^1.0"
     },
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
         },
         {
             "type": "vcs",
@@ -36,21 +41,21 @@
         }
     ],
     "scripts": {
-      "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
-      ],
-      "post-update-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
-      ]
+        "post-install-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+        ],
+        "post-update-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+        ]
     },
     "config": {
         "bin-dir": "bin/"
     },
     "autoload": {
         "classmap": [
-          "scripts/ScriptHandler.php"
+            "scripts/ScriptHandler.php"
         ]
     },
     "extra": {
@@ -74,8 +79,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/lightning": {
-                "2775425 - Lightning Extender Redirect takes users to Already installed error page":
-                "https://www.drupal.org/files/issues/2775425-2-extender-regression.diff"
+                "2775425 - Lightning Extender Redirect takes users to Already installed error page": "https://www.drupal.org/files/issues/2775425-2-extender-regression.diff"
             }
         }
     }
